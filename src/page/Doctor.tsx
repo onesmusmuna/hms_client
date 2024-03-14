@@ -5,6 +5,7 @@ export default function Doctor() {
   const [doctor, setDoctor] = useState({
     email: "",
     type: "",
+    appts: [],
   });
 
   const handleLogout = () => {
@@ -45,6 +46,21 @@ export default function Doctor() {
           <button onClick={handleLogout}>Logout</button>
         </div>
       </nav>
+
+      <div className="flex gap-2">
+        {doctor.appts.map((appt) => {
+          return (
+            <div
+              key={appt.id}
+              className="flex flex-col bg-slate-300 p-4 rounded-lg"
+            >
+              <p>{appt.prob} Needed on: </p>
+              <br />
+              <p>{appt.date}</p>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }

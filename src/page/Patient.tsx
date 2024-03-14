@@ -79,12 +79,36 @@ export default function Patient() {
           className="flex flex-col gap-2 justify-end p-4"
         >
           <select
-            name="cars"
-            id="cars"
+            name="type"
+            id="type"
             value={prob}
             onChange={(e) => setProb(e.target.value)}
           >
-            <option value="Allergis">Allergis</option>
+            <option value="allergis">Allergis</option>
+            <option value="anesthesiologists">Anesthesiologists</option>
+            <option value="cardiologists">Cardiologists</option>
+            <option value="dermatologists">Dermatologists </option>
+            <option value="endocrinologists">Endocrinologists </option>
+            <option value="physicians">Physicians </option>
+            <option value="gastroenterologists">Gastroenterologists </option>
+            <option value="geriatric">Geriatric </option>
+            <option value="hematologists">Hematologists </option>
+            <option value="internists">Internists </option>
+            <option value="geneticists">Geneticists </option>
+            <option value="nephrologists">Nephrologists </option>
+            <option value="neurologists">Neurologists </option>
+            <option value="gynecologists">Gynecologists </option>
+            <option value="oncologists">Oncologists </option>
+            <option value="osteopaths">Osteopaths </option>
+            <option value="otolaryngologists">Otolaryngologists </option>
+            <option value="podiatrists">Podiatrists </option>
+            <option value="physiatrists">Physiatrists </option>
+            <option value="psychiatrists">Psychiatrists </option>
+            <option value="radiologists">Radiologists </option>
+            <option value="pulmonologists">Pulmonologists </option>
+            <option value="rheumatologists">Rheumatologists </option>
+
+            {/* <option value="Allergis">Allergis</option>
             <option value="anesthesiologists">Anesthesiologists</option>
             <option value="Cardiologists">Cardiologists</option>
             <option value="Dermatologists">Dermatologists </option>
@@ -106,7 +130,7 @@ export default function Patient() {
             <option value="Psychiatrists">Psychiatrists </option>
             <option value="Radiologists">Radiologists </option>
             <option value="Pulmonologists">Pulmonologists </option>
-            <option value="Rheumatologists">Rheumatologists </option>
+            <option value="Rheumatologists">Rheumatologists </option> */}
           </select>
 
           <input
