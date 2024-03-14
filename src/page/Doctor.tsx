@@ -7,6 +7,14 @@ export default function Doctor() {
     type: "",
   });
 
+  const handleLogout = () => {
+    axios("http://localhost:3000/doctor/logout", {
+      method: "post",
+      headers: { "Content-type": "application/json" },
+      withCredentials: true,
+    }).then((response) => response);
+  };
+
   useEffect(() => {
     axios("http://localhost:3000/doctor", {
       method: "get",
@@ -32,6 +40,10 @@ export default function Doctor() {
       <nav>
         <p className="text-lg">Hello {doctor.email} </p>
         <p className="text-lg">Type: {doctor.type} </p>
+
+        <div className="flex justify-end">
+          <button onClick={handleLogout}>Logout</button>
+        </div>
       </nav>
     </>
   );
